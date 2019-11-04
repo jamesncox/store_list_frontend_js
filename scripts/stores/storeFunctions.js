@@ -1,14 +1,16 @@
-const createObjs = (json) => {
-    json.data.forEach((store) => {
-        let store = new Store(store)
-        let lists = json.included.filter((list) => {
-            return list.relationships.store.data.id === store.id
-        })
-        createLists(store, lists)
-        allStores.push(store)
-    })
-    // generate
-}
+
+
+// const createObjs = (json) => {
+//     json.data.forEach((store) => {
+//         let store = new Store(store)
+//         let lists = json.included.filter((list) => {
+//             return list.relationships.store.data.id === store.id
+//         })
+//         createLists(store, lists)
+//         allStores.push(store)
+//     })
+//     // generate
+// }
 
 // const createObjs = (json) => {
 //     json.data.forEach((team_member) => {
