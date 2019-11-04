@@ -1,7 +1,7 @@
 class List {
     constructor(list) {
         this.id = list.id
-        this.name = list.attributes.name
+        this.item = list.attributes.item
         this.quantity = list.attributes.quantity
         this.price = list.attributes.price
         this.stores = []
