@@ -1,6 +1,6 @@
 class Stores {
     constructor() {
-        this.stores = []
+        this.lists = []
         this.adapter = new StoresAdapter()
         // this.bindEventListeners()
         this.fetchAndLoadStores()
