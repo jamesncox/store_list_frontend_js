@@ -2,11 +2,11 @@
 
 const app = new App()
 
-function getStoreData() {
-    byebug
-    return fetch('http://localhost:3000/stores')
-        .then(res => res.json())
-        .then(data => {
-            allStores = data
-        })
-}
+// function getStoreData() {
+//     byebug
+//     return fetch('http://localhost:3000/stores')
+//         .then(res => res.json())
+//         .then(data => {
+//             allStores = data
+//         })
+// }

@@ -9,12 +9,22 @@
 </head>
 
 <body>
-    <h1>Grocery Store Lists</h1>
-    <script type="text/javascript" src="src/index.js"></script>
+    <div class="container">
+        <h1>Shopping Lists</h1>
+        <form id="new-store-form">
+            <input type="text" />
+            <input type="submit" />
+        </form>
+    </div>
 
     <div id="stores-container">
 
     </div>
+
+    <script src="src/components/stores.js"></script>
+    <script src="src/components/app.js"></script>
+    <script src="src/adapters/StoresAdapter.js"></script>
+    <script type="text/javascript" src="src/index.js"></script>
 </body>
 
 </html>

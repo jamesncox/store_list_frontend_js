@@ -1,4 +1,4 @@
-class StoreAdapter {
+class StoresAdapter {
     constructor() {
         this.baseUrl =
             'http://localhost:3000/store'
