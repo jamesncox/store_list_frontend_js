@@ -23,7 +23,7 @@ class Stores {
     }
 
     render() {
-        storesContainer.innerHTML = this.stores.map(store => `<li>${store.name}</li>`).join('')
+        storesContainer.innerHTML = this.stores.map(store => store.renderLi()).join('')
         // console.log('my stores are', this.stores)
     }
 }
