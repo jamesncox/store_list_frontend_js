@@ -22,7 +22,7 @@ Shopping List
 
 Where are you shopping? ________________ <submit> 
 
-What do you need? ________________ <submit> How many? ___________ <submit>
+What do you need? ________________ <submit> How many? ___________ <submit> 
 
 KROGER
     - Milk
