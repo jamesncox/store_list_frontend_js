@@ -5,8 +5,8 @@ python -m SimpleHTTPServer
 http://localhost:3000/stores  
 
 # DJ app
-DJ's Season = my Store
-DJ's TeamMember = my List
+DJ's Season = my List
+DJ's TeamMember = my Store
 
 # MY APP:
 
@@ -16,7 +16,7 @@ List belongs to a store.
 Store attributes: name
 List attributes: name, quantity, price
 
-The url http://localhost:3000/stores should display something like:
+The url file:///C:/Users/james/code/store_list_frontend/index.html should display something like:
 
 Shopping List
 
@@ -27,13 +27,13 @@ What do you need? ________________ <submit> How many? ___________ <submit>
 KROGER
     - Milk
     - Bread
-    -Eggs
+    - Eggs
 
 Target
-    -Vacuum
-    -Quilt
-    -Socks
+    - Vacuum
+    - Quilt
+    - Socks
 
 Lucky
-    -Hoodie
-    -Jeans
+    - Hoodie
+    - Jeans
