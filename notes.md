@@ -18,9 +18,15 @@ List attributes: name, quantity, price
 
 The url file:///C:/Users/james/code/store_list_frontend/index.html should display something like:
 
-Shopping List
+# first a "user" has to create a store
+# then the "user" can add items to that store.
+# if the store is already created they can select the store or create a new one.
 
-Where are you shopping? ________________ <submit> 
+Shopping List App
+
+Where are you shopping? Select or create a new store: ________________ <submit> 
+
+# once a store is selected, they can add items to that store. If it has to be created, then it must be selected, then they can add items.
 
 What do you need? ________________ <submit> How many? ___________ <submit> Estimated price: _________ <submit>
 
