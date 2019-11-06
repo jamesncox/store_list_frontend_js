@@ -10,8 +10,8 @@ class Stores {
         this.adapter
             .getStores()
             .then(stores => {
-                // stores.forEach(store => this.stores.push(store))
-                return console.log(stores)
+                stores.forEach(store => this.stores.push(new Store(store)))
+                // console.log(this.stores)
             })
             .then(() => {
                 this.render()
@@ -20,7 +20,7 @@ class Stores {
 
     render() {
         // console.log('rendering...')
-        const storesContainer = document.getElementById("stores-container")
+        const storesContainer = document.getElementById('stores-container')
         storesContainer.innerHTML = 'my stores here'
         // console.log('my stores are', this.stores)
     }
