@@ -1,15 +1,14 @@
 const createObjs = (json) => {
     json.data.forEach((store) => {
-        let store = new Store(store)
+        let storeObj = new Store(store)
         let lists = json.included.filter((list) => {
             return list.relationships.store.data.id === store.id
         })
         createLists(store, lists)
-        allStores.push(store)
+        allStores.push(storeObj)
     })
     generateShoppingList(allStores)
 }
-
 
 // DJ's code.... 
 

@@ -1,6 +1,6 @@
 let allStores = []
 
-const storeIndexUrl = "http://localhost:3000/stores"
+const storeIndexUrl = "http://localhost:3000/store"
 
 let main = document.querySelector("#main")
 
