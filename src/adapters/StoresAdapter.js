@@ -1,11 +1,11 @@
-class StoresAdapter {
-    constructor() {
-        this.baseUrl =
-            'http://localhost:3000/store'
-    }
+// class StoresAdapter {
+//     constructor() {
+//         this.baseUrl =
+//             'http://localhost:3000/store'
+//     }
 
-    getStores() {
-        return fetch(this.baseUrl).then(res => res.json()
-        )
-    }
-}
+//     getStores() {
+//         return fetch(this.baseUrl).then(res => res.json()
+//         )
+//     }
+// }

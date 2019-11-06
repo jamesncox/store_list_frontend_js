@@ -1,5 +1,5 @@
-class App {
-    constructor() {
-        this.stores = new Stores()
-    }
-}
+// class App {
+//     constructor() {
+//         this.stores = new Stores()
+//     }
+// }
