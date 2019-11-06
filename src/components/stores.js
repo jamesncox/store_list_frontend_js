@@ -19,9 +19,8 @@ class Stores {
     }
 
     render() {
-        // console.log('rendering...')
         const storesContainer = document.getElementById('stores-container')
-        storesContainer.innerHTML = 'my stores here'
+        storesContainer.innerHTML = this.stores.map(store => `<li>${store.name}</li>`).join('')
         // console.log('my stores are', this.stores)
     }
 }
