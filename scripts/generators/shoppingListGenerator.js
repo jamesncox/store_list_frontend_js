@@ -1,3 +1,24 @@
+const generateStoreList = (allStores) => {
+    const containerEl = document.createElement("div")
+    const listEl = document.createElement("ul")
+
+    containerEl.classList.add("all-stores")
+    listEl.classList.add("list")
+
+    if (allStores.length > 0) {
+        allStores.forEach((store => {
+            const itemEl = document.createElement("li")
+            itemEl.classList.add(`store-${store.name}`)
+            itemEl.textContent = list.item
+            listEl.appendChild(itemEl)
+        }))
+    } else {
+        containerEl.textContent = "Oops try again later!"
+    }
+    containerEl.appendChild(listEl)
+    main.append(ContainerEl)
+}
+
 // DJ's code....
 
 // const generateTeamList = (allMembers) => {
@@ -24,19 +45,4 @@
 //     containerEl.appendChild(listEl)
 //     main.append(containerEl)
 
-// }
-
-// const generateShoppingList = (allLists) => {
-//     const containerEl = document.createElement("div")
-//     const listEl = document.createElement("ul")
-
-//     containerEl.classList.add("all-Lists")
-//     listEl.classList.add("list")
-
-//     if (allLists.length > 0){
-//         allLists.forEach((list => {
-//             const itemEl = document.createElement("li")
-//             itemEl.classList.add()
-//         }))
-//     }
 // }
