@@ -1,7 +1,7 @@
-const createStores = (list, stores) => {
-    stores.forEach((store) => {
-        let storeObj = new Store(store)
-        list.stores.push(storeObj)
+const createLists = (store, lists) => {
+    lists.forEach((list) => {
+        let listObj = new List(list)
+        store.lists.push(listObj)
     })
 }
 

@@ -1,13 +1,13 @@
 const createObjs = (json) => {
-    json.data.forEach((list) => {
-        let list = new List(list)
-        let stores = json.included.filter((store) => {
-            return store.relationships.list.data.id === list.id
+    json.data.forEach((store) => {
+        let store = new Store(store)
+        let lists = json.included.filter((list) => {
+            return list.relationships.store.data.id === store.id
         })
-        createStores(list, stores)
-        allLists.push(list)
+        createLists(store, lists)
+        allStores.push(store)
     })
-    generateShoppingList(allLists)
+    generateShoppingList(allStores)
 }
 
 

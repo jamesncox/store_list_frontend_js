@@ -1,8 +1,10 @@
-class Store {
-    constructor(store) {
-        this.id = store.id
-        this.name = store.attributes.name
-        this.listId = store.relationships.list.data.id
+class List {
+    constructor(list) {
+        this.id = list.id
+        this.item = list.attributes.item
+        this.quantity = list.attributes.quantity
+        this.price = list.attributes.price
+        this.storeId = list.relationships.store.data.id
     }
 }
 
