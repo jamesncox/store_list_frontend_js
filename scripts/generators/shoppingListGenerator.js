@@ -1,4 +1,4 @@
-const generateStoreList = (allStores) => {
+const generateShoppingList = (allStores) => {
     const containerEl = document.createElement("div")
     const listEl = document.createElement("ul")
 
@@ -9,6 +9,12 @@ const generateStoreList = (allStores) => {
         allStores.forEach((store => {
             const itemEl = document.createElement("li")
             itemEl.classList.add(`store-${store.name}`)
+            store.forEach((list => {
+                const listItemsEl = document.createElement("li")
+                listItemsEl.classList.add(`list-${list.item}`)
+                listItemsEl.textContent = list.item
+                list.appendChild(listItemsEl)
+            }))
             itemEl.textContent = list.item
             listEl.appendChild(itemEl)
         }))

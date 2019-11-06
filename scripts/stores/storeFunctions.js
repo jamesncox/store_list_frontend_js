@@ -4,7 +4,7 @@ const createObjs = (json) => {
         let lists = json.included.filter((list) => {
             return list.relationships.store.data.id === store.id
         })
-        createLists(store, lists)
+        createLists(storeObj, lists)
         allStores.push(storeObj)
     })
     generateShoppingList(allStores)
