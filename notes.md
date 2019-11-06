@@ -22,12 +22,13 @@ Shopping List
 
 Where are you shopping? ________________ <submit> 
 
-What do you need? ________________ <submit> How many? ___________ <submit> 
+What do you need? ________________ <submit> How many? ___________ <submit> Estimated price: _________ <submit>
 
 KROGER
-    - Milk
+    - Milk 
     - Bread
     - Eggs
+    Estimated total: 
 
 Target
     - Vacuum

@@ -1,4 +1,4 @@
-let allLists = []
+let allStores = []
 
 const storeIndexUrl = "http://localhost:3000/stores"
 

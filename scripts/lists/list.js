@@ -1,23 +1,20 @@
-class List {
-    constructor(list) {
-        this.id = list.id
-        this.item = list.attributes.item
-        this.quantity = list.attributes.quantity
-        this.price = list.attributes.price
-        this.stores = []
+class Store {
+    constructor(store) {
+        this.id = store.id
+        this.name = store.attributes.name
+        this.listId = store.relationships.list.data.id
     }
 }
 
-// DJ's code......
+// DJ's code....
 
-// class TeamMember {
-//     constructor(team_member) {
-//         this.id = team_member.id
-//         this.uplay = team_member.attributes.uplay
-//         this.rank = team_member.attributes.rank
-//         this.position = team_member.attributes.position
-//         this.def_main = team_member.attributes.def_main
-//         this.atk_main = team_member.attributes.atk_main
-//         this.seasons = []
+// class Season {
+//     constructor(season){
+//         this.id = season.id
+//         this.mmr = season.attributes.mmr
+//         this.kda = season.attributes.kda
+//         this.wl = season.attributes.wl 
+//         this.headShotRatio = season.attributes.headshot_ratio
+//         this.teammemberId = season.relationships.team_member.data.id
 //     }
 // }
