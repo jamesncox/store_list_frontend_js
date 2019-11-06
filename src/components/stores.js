@@ -2,8 +2,12 @@ class Stores {
     constructor() {
         this.lists = []
         this.adapter = new StoresAdapter()
-        // this.bindEventListeners()
+        this.initBindingsAndEventListeners()
         this.fetchAndLoadStores()
+    }
+
+    initBindingsAndEventListeners() {
+        this.storesContainer = document.getElementById('stores-container')
     }
 
     fetchAndLoadStores() {
@@ -19,7 +23,6 @@ class Stores {
     }
 
     render() {
-        const storesContainer = document.getElementById('stores-container')
         storesContainer.innerHTML = this.stores.map(store => `<li>${store.name}</li>`).join('')
         // console.log('my stores are', this.stores)
     }
