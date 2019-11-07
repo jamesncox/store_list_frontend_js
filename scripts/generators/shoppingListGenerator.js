@@ -1,4 +1,5 @@
 const generateShoppingList = (allStores) => {
+    // debugger
     const containerEl = document.createElement("div")
     const listEl = document.createElement("ul")
 
@@ -6,23 +7,26 @@ const generateShoppingList = (allStores) => {
     listEl.classList.add("list")
 
     if (allStores.length > 0) {
+        //try and render out the first store first before getting the list items
         allStores.forEach((store => {
-            const itemEl = document.createElement("li")
+            let itemEl = document.createElement("li")
             itemEl.classList.add(`store-${store.name}`)
-            store.forEach((list => {
+            itemEl.textContent = `${store.name}`
+            containerEl.appendChild(itemEl)
+            // itemEl.textContent = list.item
+            // listEl.appendChild(itemEl)
+
+            store.lists.forEach((list => {
                 const listItemsEl = document.createElement("li")
-                listItemsEl.classList.add(`list-${list.item}`)
+                listItemsEl.classList.add(`list-${list.id}`)
                 listItemsEl.textContent = list.item
-                list.appendChild(listItemsEl)
+                itemEl.appendChild(listItemsEl)
             }))
-            itemEl.textContent = list.item
-            listEl.appendChild(itemEl)
         }))
     } else {
         containerEl.textContent = "Oops try again later!"
     }
-    containerEl.appendChild(listEl)
-    main.append(ContainerEl)
+    main.append(containerEl)
 }
 
 // DJ's code....
