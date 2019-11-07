@@ -44,3 +44,78 @@ Target
 Lucky
     - Hoodie
     - Jeans
+
+# NEW index.html and shoppingListGenerator.js to play with...
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+    <div class="container"> 
+      <h1> All stores </h1>
+
+        <div class="stores-wrapper">
+
+          <div class="store-kroger">
+            <h3> Kroger </h3>
+            <ul>
+              <li> milk </li>
+            </ul>
+
+          </div>
+
+          <div class="store-kroger">
+            <h3> Target </h3>
+            <ul>
+              <li> milk </li>
+            </ul>
+
+          </div>
+
+          <div class="store-kroger">
+            <h3> Lucky's </h3>
+            <ul>
+              <li> milk </li>
+            </ul>
+
+          </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+const storeWrapper = document.createElement("div")
+storeWrapper.classList("stores-wrapper")
+
+allstores.forEach((store) => {
+  const storeEl = document.createElement("div")
+  const nameEl = document.createElement("h3")
+  const listEl = document.createElement("ul")
+  
+  storeEl.classList(`store-${store.name}`)
+  nameEl.classList(store.name)
+  listEl.classList(`${store.name}-list`)
+
+  nameEl.textContent = store.name 
+
+  store.lists.forEach((listItem) => {
+    const itemEl = document.createElement("li")
+    itemEl.classList(`list-item-${listItem.item}`)
+
+    itemEl.textContent = listItem.item
+    listEl.appendChild(itemEl)
+  })
+
+  storeEl.append(nameEl, listEl)
+}) 
