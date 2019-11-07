@@ -2,7 +2,7 @@ let allStores = []
 
 const storeIndexUrl = "http://localhost:3000/store"
 
-let main = document.querySelector("#lists-container")
+let main = document.querySelector("#stores-wrapper")
 
 fetchAllLists(storeIndexUrl)
 

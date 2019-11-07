@@ -1,28 +1,54 @@
 const generateShoppingList = (allStores) => {
-    // debugger
-    const containerEl = document.createElement("div")
-    const listEl = document.createElement("ul")
 
-    containerEl.classList.add("all-stores")
-    listEl.classList.add("list")
+    const storeWrapper = document.createElement("div")
+    storeWrapper.classList.add("stores-wrapper")
 
     if (allStores.length > 0) {
-        //try and render out the first store first before getting the list items
-        allStores.forEach((store => {
-            let itemEl = document.createElement("li")
-            itemEl.classList.add(`store-${store.name}`)
-            itemEl.textContent = `${store.name}`
-            containerEl.appendChild(itemEl)
-            // itemEl.textContent = list.item
-            // listEl.appendChild(itemEl)
+        allStores.forEach((store) => {
+            const storeEl = document.createElement("div")
+            const nameEl = document.createElement("h3")
+            const listEl = document.createElement("ul")
 
-            store.lists.forEach((list => {
-                const listItemsEl = document.createElement("li")
-                listItemsEl.classList.add(`list-${list.id}`)
-                listItemsEl.textContent = list.item
-                itemEl.appendChild(listItemsEl)
-            }))
-        }))
+            storeEl.classList.add(`store-${store.name}`)
+            nameEl.classList.add(store.name)
+            listEl.classList.add(`${store.name}-list`)
+
+            nameEl.textContent = store.name
+
+            store.lists.forEach((listItem) => {
+                const itemEl = document.createElement("li")
+                itemEl.classList.add(`list-item-${listItem.item}`)
+
+                itemEl.textContent = listItem.item
+                listEl.appendChild(itemEl)
+            })
+
+            storeEl.appendChild(nameEl, listEl)
+        })
+        // debugger
+        // const containerEl = document.createElement("div")
+        // const listEl = document.createElement("ul")
+
+        // containerEl.classList.add("all-stores")
+        // listEl.classList.add("list")
+
+        // if (allStores.length > 0) {
+        //     //try and render out the first store first before getting the list items
+        //     allStores.forEach((store => {
+        //         let itemEl = document.createElement("li")
+        //         itemEl.classList.add(`store-${store.name}`)
+        //         itemEl.textContent = `${store.name}`
+        //         containerEl.appendChild(itemEl)
+        //         // itemEl.textContent = list.item
+        //         // listEl.appendChild(itemEl)
+
+        //         store.lists.forEach((list => {
+        //             const listItemsEl = document.createElement("li")
+        //             listItemsEl.classList.add(`list-${list.id}`)
+        //             listItemsEl.textContent = list.item
+        //             itemEl.appendChild(listItemsEl)
+        //         }))
+        //     }))
     } else {
         containerEl.textContent = "Oops try again later!"
     }
