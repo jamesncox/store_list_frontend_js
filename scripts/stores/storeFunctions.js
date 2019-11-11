@@ -7,6 +7,6 @@ const createObjs = (json) => {
         createLists(storeObj, lists)
         allStores.push(storeObj)
     })
-    debugger
+    // debugger
     generateShoppingList(allStores)
 }
