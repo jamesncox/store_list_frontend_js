@@ -21,7 +21,7 @@ function getStoreName(event) {
             return response.json();
         })
         .then(function (object) {
-            console.log(object);
+            console.log(object.name);
         });
 }
 
